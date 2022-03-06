@@ -1,4 +1,5 @@
-const http = require("http");
+import { createServer } from "http";
+import { hello } from "./module.js";
 
 const defaultListenerHead = {
     statusCode: 200,
@@ -9,8 +10,8 @@ const defaultListenerHead = {
 
 const defaultListener = (req, res) => {
     res.writeHead(defaultListenerHead.statusCode, defaultListenerHead.headers);
-    res.write('Hello World!');
+    res.write(hello);
     res.end();
 };
 
-http.createServer(defaultListener).listen(8080);
+createServer(defaultListener).listen(8080);
