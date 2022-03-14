@@ -2,9 +2,9 @@
   "name": "node-application",
   "version": "1.0.0",
   "description": "",
-  "main": "./build/index.js",
+  "main": "./build/app.js",
   "scripts": {
-    "start": "tsc --project ./ && nodemon ./build/index.js",
+    "start": "nodemon ./build/app.js",
     "build": "tsc --project ./",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
